@@ -3,11 +3,11 @@ import React from "react";
 import logo from "../assets/creativagroup.png";
 import iconLogo from "../assets/cg-icon.png";
 import Services from "./Services";
+import { FaWhatsapp } from "react-icons/fa";
 
 function Globe() {
-
   const generateWhatsAppLink = (message: string) => {
-    const phoneNumber = "5492964543839"; 
+    const phoneNumber = "5492964543839";
     const encodedMessage = encodeURIComponent(message);
     return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
   };
@@ -18,6 +18,7 @@ function Globe() {
         <div className="relative w-full h-full flex flex-col justify-center items-center ">
           <Image src={iconLogo} alt="" className="w-2/3 pb-8" />
           <Image src={logo} alt="" className="absolute bottom-0" />
+          <div></div>
         </div>
       </div>
       <div className="flex flex-col gap-2 items-center">

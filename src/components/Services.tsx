@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 function Services(props: { message: string; bg: string; href: string }) {
   // Estado para manejar si el mouse está sobre el componente
@@ -18,6 +19,9 @@ function Services(props: { message: string; bg: string; href: string }) {
       <p className="p-2 text-wrap text-[7px] sm:text-sm font-medium text-center">
         {props.message}
       </p>
+      <div className="bg-white h-6 w-6 absolute flex items-center justify-center rounded-full -right-3 border border-gray-200">
+        <FaWhatsapp className="text-green-500 w-5 h-5" />
+      </div>
     </div>
   );
 
