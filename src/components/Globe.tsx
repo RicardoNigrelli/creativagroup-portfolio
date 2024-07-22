@@ -32,11 +32,11 @@ function Globe() {
   };
 
   const groupVariants = {
-    hidden: (direction) => ({
+    hidden: (direction: number) => ({
       y: direction === 1 ? 1000 : -1000,
       opacity: 0,
       transition: {
-        duration: 0.3, // Ajusta la duración aquí
+        duration: 0.3,
       },
     }),
     visible: {
@@ -46,14 +46,14 @@ function Globe() {
         type: "spring",
         stiffness: 50,
         damping: 20,
-        duration: 0.3, // Ajusta la duración aquí
+        duration: 0.3, 
       },
     },
-    exit: (direction) => ({
+    exit: (direction: number) => ({
       y: direction === 1 ? -1000 : 1000,
       opacity: 0,
       transition: {
-        duration: 0.3, // Ajusta la duración aquí
+        duration: 0.3, 
       },
     }),
   };
