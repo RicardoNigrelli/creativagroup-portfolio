@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import logo from "../assets/creativagroup.png";
 import iconLogo from "../assets/cg-icon.png";
-import Services from "./Services";
+import Services from "../Services";
 import { FaWhatsapp, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";

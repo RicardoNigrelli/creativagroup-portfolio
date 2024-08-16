@@ -1,9 +1,12 @@
-import React from 'react'
+import GlobePor from "@/components/Globe/GlobePor";
+import React from "react";
 
 const page = () => {
   return (
-    <div>page</div>
-  )
-}
+    <div className="flex min-h-screen items-center justify-center">
+      <GlobePor />
+    </div>
+  );
+};
 
-export default page
+export default page;
