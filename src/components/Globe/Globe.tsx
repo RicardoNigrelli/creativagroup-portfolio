@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import logo from "../assets/creativagroup.png";
-import iconLogo from "../assets/cg-icon.png";
+import logo from "../../assets/creativagroup.png";
+import iconLogo from "../../assets/cg-icon.png";
 import Services from "../Services";
 import { FaWhatsapp, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -46,14 +46,14 @@ function Globe() {
         type: "spring",
         stiffness: 50,
         damping: 20,
-        duration: 0.3, 
+        duration: 0.3,
       },
     },
     exit: (direction: number) => ({
       y: direction === 1 ? -1000 : 1000,
       opacity: 0,
       transition: {
-        duration: 0.3, 
+        duration: 0.3,
       },
     }),
   };

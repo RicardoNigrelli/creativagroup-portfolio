@@ -1,6 +1,4 @@
-import Globe from "@/components/Globe";
 import SelectLanguages from "@/components/SelectLanguages";
-import Image from "next/image";
 
 export default function Home() {
   return (
