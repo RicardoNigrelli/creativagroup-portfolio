@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { BubbleBg } from "@/components/BubbleBg";
 
 // Especificando los pesos de la fuente
 const poppins = Poppins({
@@ -20,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <BubbleBg>{children}</BubbleBg>
+      </body>
     </html>
   );
 }
