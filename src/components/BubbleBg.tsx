@@ -9,12 +9,16 @@ interface BubbleType {
 export const BubbleBg: React.FC<BubbleType> = ({ children }) => {
   useEffect(() => {
     const interBubble = document.querySelector<HTMLDivElement>(".interactive")!;
+    if (!interBubble) {
+      console.error("Elemento .interactive no encontrado.");
+      return;
+    }
     let curX = 0;
     let curY = 0;
     let tgX = 0;
     let tgY = 0;
 
-    const proximityFactor = 0.7;
+    const proximityFactor = 0.4;
 
     function move() {
       curX += (tgX - curX) * proximityFactor;

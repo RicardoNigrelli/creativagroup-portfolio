@@ -134,14 +134,11 @@ body {
       no-repeat;
     mix-blend-mode: var(--blending);
 
-    width: 100px;
-    height: 100px;
-    top: 0;
-    left: 0;
-
-    transform: none;
-    transition: transform 0.1s ease-out;
-
+    width: 15%;
+    height: 15%;
+    top: -100%;
+    left: 0%;
+    pointer-events: none;
     opacity: 0.7;
   }
 }
