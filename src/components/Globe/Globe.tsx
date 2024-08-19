@@ -76,8 +76,7 @@ function Globe() {
               animate="visible"
               exit="exit"
               variants={groupVariants}
-              className="flex flex-col gap-2 items-center"
-            >
+              className="flex flex-col gap-2 items-center">
               <div className=" flex items-center flex-col h-64">
                 <Services
                   message={"Sobre Nosotros"}
@@ -126,8 +125,7 @@ function Globe() {
               animate="visible"
               exit="exit"
               variants={groupVariants}
-              className="flex flex-col gap-2 items-center"
-            >
+              className="flex flex-col gap-2 items-center">
               <button className="mt-4" onClick={showGroup1}>
                 <FaChevronUp
                   className="text-3xl animate-bounce"
@@ -163,8 +161,7 @@ function Globe() {
               animate="visible"
               exit="exit"
               variants={groupVariants}
-              className="flex flex-col gap-2 items-center"
-            >
+              className="flex flex-col gap-2 items-center">
               <button className="mt-4" onClick={showGroup2}>
                 <FaChevronUp
                   className="text-3xl animate-bounce"
@@ -205,22 +202,19 @@ function Globe() {
         <a
           href={generateWhatsAppLink("Hola!")}
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           <FaWhatsapp className="text-2xl w-3 h-3 md:w-7 md:h-7" />
         </a>
         <a
           href="https://www.instagram.com"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           <FaInstagram className="text-2xl w-3 h-3 md:w-7 md:h-7" />
         </a>
         <a
           href="mailto:info@creativagroup.com"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           <AiOutlineMail className="text-2xl w-3 h-3 md:w-7 md:h-7" />
         </a>
       </div>
