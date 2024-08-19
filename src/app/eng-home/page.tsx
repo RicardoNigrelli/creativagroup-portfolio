@@ -1,9 +1,12 @@
-import React from 'react'
+import GlobeEng from "@/components/Globe/GlobeEng";
+import React from "react";
 
 const page = () => {
   return (
-    <div>page</div>
-  )
-}
+    <div className="flex min-h-screen items-center justify-center">
+      <GlobeEng />
+    </div>
+  );
+};
 
-export default page
+export default page;

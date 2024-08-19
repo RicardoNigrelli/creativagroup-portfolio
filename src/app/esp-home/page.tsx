@@ -1,4 +1,4 @@
-import Globe from '@/components/Globe';
+import Globe from '@/components/Globe/Globe';
 import React from 'react'
 
 const page = () => {
