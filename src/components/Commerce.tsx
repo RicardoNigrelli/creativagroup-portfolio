@@ -19,12 +19,28 @@ const Commerce = () => {
         </div>
         <Services
           message={"Wines"}
-          bg="bg-[#8EB6ED]"
+          bgl="bg-[#8EB6ED]"
           href="/esp-home/commerce/wines"
+          bgr="bg-[#8EB6ED]"
         />
-        <Services message={"Carnes"} bg="bg-[#00873E]" href="/" />
-        <Services message={"Especias"} bg="bg-[#00873E]" href="/" />
-        <Services message={"Yerbas"} bg="bg-[#CE9AD3]" href="/" />
+        <Services
+          message={"Carnes"}
+          bgl="bg-[#00873E]"
+          href="/"
+          bgr="bg-[#00873E]"
+        />
+        <Services
+          message={"Especias"}
+          bgl="bg-[#00873E]"
+          href="/"
+          bgr="bg-[#00873E]"
+        />
+        <Services
+          message={"Yerbas"}
+          bgl="bg-[#CE9AD3]"
+          href="/"
+          bgr="bg-[#CE9AD3]"
+        />
         <Link
           href="/esp-home"
           className="flex items-center gap-2 text-white hover:text-blue-700 pr-4 text-xs"

@@ -74,10 +74,16 @@ const Wines = () => {
         </div>
         <Services
           message={"Cafayate"}
-          bg="bg-[#8EB6ED]"
+          bgl="bg-[#8EB6ED]"
           href="/esp-home/commerce/wines"
+          bgr="bg-[#8EB6ED]"
         />
-        <Services message={"Bodega Trassoles"} bg="bg-[#00873E]" href="/" />
+        <Services
+          message={"Bodega Trassoles"}
+          bgl="bg-[#00873E]"
+          href="/"
+          bgr="bg-[#00873E]"
+        />
 
         <div className="carousel-container flex gap-4">{visibleItems}</div>
         <div className="navigation">
