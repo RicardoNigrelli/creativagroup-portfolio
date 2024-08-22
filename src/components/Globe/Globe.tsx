@@ -8,6 +8,7 @@ import { FaWhatsapp, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { motion, AnimatePresence } from "framer-motion";
+import { Navbar } from "../Navbar";
 
 function Globe() {
   const generateWhatsAppLink = (message: string) => {
@@ -59,7 +60,8 @@ function Globe() {
   };
 
   return (
-    <div className="absolute bg-white bg-opacity-60 rounded-3xl flex flex-col items-center justify-center w-3/4 z-10 h-[80%]">
+    <div className="absolute shadow-lg bg-white bg-opacity-60 rounded-3xl flex flex-col items-center justify-center w-3/4 z-10 h-[80%]">
+      <Navbar />
       <div className="relative flex flex-col justify-center items-center w-48 h-48 sm:w-80 sm:h-80 md:h-96 md:w-96 rounded-full bg-gradient-to-r from-[#fff2ea9f] to-[#d0f4fa75]">
         <div className="relative w-full h-full flex flex-col justify-center items-center">
           <Image src={iconLogo} alt="" className="w-2/4 pb-8" />
@@ -117,8 +119,7 @@ function Globe() {
               animate="visible"
               exit="exit"
               variants={groupVariants}
-              className="flex flex-col gap-2 items-center"
-            >
+              className="flex flex-col gap-2 items-center">
               <div className=" flex items-center flex-col h-64 md:hidden">
                 <Services
                   message={"Sobre Nosotros"}
@@ -174,8 +175,7 @@ function Globe() {
               animate="visible"
               exit="exit"
               variants={groupVariants}
-              className="flex flex-col gap-2 items-center"
-            >
+              className="flex flex-col gap-2 items-center">
               <button className="mt-4" onClick={showGroup1}>
                 <FaChevronUp
                   className="text-3xl animate-bounce"
@@ -211,8 +211,7 @@ function Globe() {
               animate="visible"
               exit="exit"
               variants={groupVariants}
-              className="flex flex-col gap-2 items-center"
-            >
+              className="flex flex-col gap-2 items-center">
               <button className="mt-4" onClick={showGroup2}>
                 <FaChevronUp
                   className="text-3xl animate-bounce"
@@ -266,22 +265,19 @@ function Globe() {
         <a
           href={generateWhatsAppLink("Hola!")}
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           <FaWhatsapp className="text-2xl w-3 h-3 md:w-7 md:h-7" />
         </a>
         <a
           href="https://www.instagram.com"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           <FaInstagram className="text-2xl w-3 h-3 md:w-7 md:h-7" />
         </a>
         <a
           href="mailto:info@creativagroup.com"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           <AiOutlineMail className="text-2xl w-3 h-3 md:w-7 md:h-7" />
         </a>
       </div>
