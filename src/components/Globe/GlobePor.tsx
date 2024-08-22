@@ -9,7 +9,7 @@ import { FaInstagram } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { motion, AnimatePresence } from "framer-motion";
 
-function GlobePor() {
+function Globe() {
   const generateWhatsAppLink = (message: string) => {
     const phoneNumber = "5492964543839";
     const encodedMessage = encodeURIComponent(message);
@@ -59,14 +59,55 @@ function GlobePor() {
   };
 
   return (
-    <div className="bg-white bg-opacity-60 rounded-3xl flex flex-col items-center justify-center p-8 sm:p-32">
-      <div className="flex flex-col justify-center items-center w-48 h-48 sm:w-80 sm:h-80 md:h-96 md:w-96 rounded-full bg-gradient-to-r from-[#fff2ea9f] to-[#d0f4fa75]">
+    <div className="absolute bg-white bg-opacity-60 rounded-3xl flex flex-col items-center justify-center w-3/4 z-10 h-[80%]">
+      <div className="relative flex flex-col justify-center items-center w-48 h-48 sm:w-80 sm:h-80 md:h-96 md:w-96 rounded-full bg-gradient-to-r from-[#fff2ea9f] to-[#d0f4fa75]">
         <div className="relative w-full h-full flex flex-col justify-center items-center">
-          <Image src={iconLogo} alt="" className="w-2/3 pb-8" />
-          <Image src={logo} alt="" className="absolute bottom-0" />
+          <Image src={iconLogo} alt="" className="w-2/4 pb-8" />
+          <Image src={logo} alt="" className="absolute bottom-10 w-3/4" />
+        </div>
+
+        <div className="hidden h-fit md:flex absolute z-10 top-16 -left-32">
+          <Services
+            message={"Comercialize e Distribua!"}
+            bgl="bg-[#8EB6ED]"
+            href="/esp-home/commerce"
+            bgr="bg-none"
+          />
+        </div>
+        <div className="hidden h-fit md:flex absolute z-10 -right-32">
+          <Services
+            message={"Faça Crescer Sua Marca Conosco"}
+            bgl="bg-none"
+            href="/"
+            bgr="bg-[#DAC848]"
+          />
+        </div>
+        <div className="hidden h-fit md:flex absolute z-10 bottom-16 -left-32">
+          <Services
+            message={"Colabore com Nossa Fundação"}
+            bgl="bg-[#00873E]"
+            href="/"
+            bgr="bg-none"
+          />
+        </div>
+        <div className="hidden h-fit md:flex absolute z-10 top-0 -right-16">
+          <Services
+            message={"Transforme Sua Presença Online"}
+            bgl="bg-none"
+            href="/"
+            bgr="bg-[#CE9AD3]"
+          />
+        </div>
+        <div className="hidden h-fit md:flex absolute z-10 bottom-0 -right-8">
+          <Services
+            message={"Receba Consultoria Profissional"}
+            bgl="bg-none"
+            href="/"
+            bgr="bg-[#FEC28E]"
+          />
         </div>
       </div>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center relative">
         <AnimatePresence mode="wait" custom={direction}>
           {currentGroup === "group1" && (
             <motion.div
@@ -78,34 +119,45 @@ function GlobePor() {
               variants={groupVariants}
               className="flex flex-col gap-2 items-center"
             >
-              <div className=" flex items-center flex-col h-64">
-                <Services message={"Sobre Nós"} bg="bg-[#DAC848]" href="/" />
+              <div className=" flex items-center flex-col h-64 md:hidden">
+                <Services
+                  message={"Sobre Nós"}
+                  bgl="bg-[#DAC848]"
+                  href="/"
+                  bgr="bg-[#DAC848]"
+                />
                 <Services
                   message={"Comercialize e Distribua!"}
-                  bg="bg-[#8EB6ED]"
+                  bgl="bg-[#8EB6ED]"
                   href="/esp-home/commerce"
+                  bgr="bg-[#8EB6ED]"
                 />
                 <Services
                   message={"Faça Crescer Sua Marca Conosco"}
-                  bg="bg-[#00873E]"
+                  bgl="bg-[#00873E]"
                   href="/"
+                  bgr="bg-[#00873E]"
                 />
                 <Services
                   message={"Colabore com Nossa Fundação"}
-                  bg="bg-[#00873E]"
+                  bgl="bg-[#00873E]"
                   href="/"
+                  bgr="bg-[#00873E]"
                 />
                 <Services
                   message={"Transforme Sua Presença Online"}
-                  bg="bg-[#CE9AD3]"
+                  bgl="bg-[#CE9AD3]"
                   href="/"
+                  bgr="bg-[#CE9AD3]"
                 />
                 <Services
                   message={"Receba Consultoria Profissional"}
-                  bg="bg-[#FEC28E]"
+                  bgl="bg-[#FEC28E]"
                   href="/"
+                  bgr="bg-[#FEC28E]"
                 />
               </div>
+
               <button className="mt-4" onClick={showGroup2}>
                 <FaChevronDown
                   className="text-3xl animate-bounce"
@@ -168,22 +220,35 @@ function GlobePor() {
                 />
               </button>
               <div className=" flex items-center flex-col h-52">
-                <Services message={"Projetos"} bg="bg-[#8EB6ED]" href="/" />
+                <Services
+                  message={"Projetos"}
+                  bgl="bg-[#8EB6ED]"
+                  href="/"
+                  bgr="bg-[#8EB6ED]"
+                />
                 <Services
                   message={"Impacto Social"}
-                  bg="bg-[#00873E]"
+                  bgl="bg-[#00873E]"
                   href="/"
+                  bgr="bg-[#00873E]"
                 />
-                <Services message={"Crowdfunding"} bg="bg-[#00873E]" href="/" />
+                <Services
+                  message={"Crowdfunding"}
+                  bgl="bg-[#00873E]"
+                  href="/"
+                  bgr="bg-[#00873E]"
+                />
                 <Services
                   message={"Trabalhe Conosco"}
-                  bg="bg-[#CE9AD3]"
+                  bgl="bg-[#CE9AD3]"
                   href="/"
+                  bgr="bg-[#CE9AD3]"
                 />
                 <Services
                   message={"Perguntas Frequentes"}
-                  bg="bg-[#FEC28E]"
+                  bgl="bg-[#FEC28E]"
                   href="/"
+                  bgr="bg-[#FEC28E]"
                 />
               </div>
 
@@ -199,7 +264,7 @@ function GlobePor() {
       </div>
       <div className="flex flex-row gap-1 w-full justify-end">
         <a
-          href={generateWhatsAppLink("Olá!")}
+          href={generateWhatsAppLink("Hola!")}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -224,4 +289,4 @@ function GlobePor() {
   );
 }
 
-export default GlobePor;
+export default Globe;
