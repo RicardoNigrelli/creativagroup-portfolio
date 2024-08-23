@@ -77,3 +77,110 @@ body {
     transform: translateY(0);
   }
 }
+
+
+.footer {
+    display: grid;
+    place-items: center;
+    height: 20vh;
+}
+
+.social-media-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-media-button {
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    outline: 2px solid white;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    display: grid;
+    place-items: center;
+}
+
+.social-media-button:hover {
+    outline-offset: 3px;
+    transform: scale(1.05);
+}
+
+.social-media-button img {
+    transition: transform 0.3s;
+}
+
+.social-media-button:hover img {
+    transform: scale(1.15);
+}
+
+
+.social-media-button:nth-child(1):hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.whatsapp {
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    outline: 2px solid white;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    display: grid;
+    place-items: center;
+}
+
+.whatsapp:hover {
+    outline-offset: 3px;
+    transform: scale(1.05);
+}
+
+.whatsapp img {
+    transition: transform 0.3s;
+}
+
+.whatsapp:hover img {
+    transform: scale(1.15);
+}
+.whatsapp:nth-child(1):hover {
+    background-color: #0ac223;
+}
+
+.gmail {
+        width: 3rem;
+        height: 3rem;
+        border: none;
+        background: transparent;
+        border-radius: 50%;
+        outline: 2px solid white;
+        cursor: pointer;
+        transition: transform 0.3s, background-color 0.3s;
+        display: grid;
+        place-items: center;
+    }
+    
+    .gmail:hover {
+        outline-offset: 3px;
+        transform: scale(1.05);
+    }
+    
+    .gmail img {
+        transition: transform 0.3s;
+    }
+    
+    .gmail:hover img {
+        transform: scale(1.15);
+        
+    }
+
+.gmail:nth-child(1):hover {
+    background-color: #ff0000;
+    background-image: url(/gmail-svgrepo-com.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}

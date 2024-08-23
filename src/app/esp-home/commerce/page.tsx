@@ -3,10 +3,10 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div >
-        <Commerce />
+    <div className="flex min-h-screen items-center justify-center">
+      <Commerce />
     </div>
-  )
+  );
 }
 
 export default page
