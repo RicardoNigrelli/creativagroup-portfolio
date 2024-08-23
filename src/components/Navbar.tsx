@@ -13,7 +13,7 @@ export const Navbar = () => {
         <ul className="flex space-x-4">
           <li>
             <Link
-              className={`hover:underline ${
+              className={`hover:text-blue-300 ${
                 active === "/esp-home" ? "text-blue-300" : ""
               }`}
               href="/">
@@ -22,16 +22,16 @@ export const Navbar = () => {
           </li>
           <li>
             <Link
-              className={`hover:underline ${
+              className={`hover:text-blue-300 ${
                 active === "/about-us" ? "text-blue-300" : ""
               }`}
               href="/">
-              Sobre Nosotros
+              Acerca de Nosotros
             </Link>
           </li>
           <li>
             <Link
-              className={`hover:underline ${
+              className={`hover:text-blue-300 ${
                 active === "/services" ? "text-blue-300" : ""
               }`}
               href="/">
@@ -40,11 +40,9 @@ export const Navbar = () => {
           </li>
           <li>
             <Link
-              className={`hover:underline ${
-                active === "/contact" ? "text-blue-300" : ""
-              }`}
+              className={`hover:bg-blue-300 text-white bg-blue-400 rounded-md p-3 `}
               href="/">
-              Contacto
+              Contáctanos
             </Link>
           </li>
         </ul>
