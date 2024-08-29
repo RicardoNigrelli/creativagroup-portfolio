@@ -9,13 +9,15 @@ import { FaInstagram } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { motion, AnimatePresence } from "framer-motion";
 import { Navbar } from "./Navbar";
+import Link from "next/link";
 
 interface DetailsProps {
   title: string;
   description: string;
+  color: string;
 }
 
-const Details: React.FC<DetailsProps> = ({ title, description }) => {
+const Details: React.FC<DetailsProps> = ({ title, description, color }) => {
   const generateWhatsAppLink = (message: string) => {
     const phoneNumber = "5492964543839";
     const encodedMessage = encodeURIComponent(message);
@@ -25,9 +27,23 @@ const Details: React.FC<DetailsProps> = ({ title, description }) => {
   return (
     <div className="absolute shadow-lg bg-white bg-opacity-50 rounded-3xl flex flex-col items-center justify-center w-3/4 z-10 h-[80%]">
       <Navbar />
-      <div className="flex flex-col justify-center items-center w-48 h-48 sm:w-80 sm:h-80 md:h-96 md:w-96 rounded-full bg-gradient-to-r from-[#fff2ea9f] to-[#d0f4fa75]">
+      <div className="relative flex flex-col justify-center items-center w-48 h-48 sm:w-80 sm:h-80 md:h-96 md:w-96 rounded-full bg-gradient-to-r from-[#fff2ea9f] to-[#d0f4fa75]">
+        <div className="absolute left-0 top-0">
+          <button
+            className={`w-[75px] h-8 p-4 rounded-xl border-2 font-bold text-sm text-center flex justify-center items-center gap-1`}
+            style={{ borderColor: color }}
+          >
+            <div
+              className="w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-r-[12px]"
+              style={{ borderRightColor: color }}
+            ></div>
+            <Link href="/esp-home">
+            Volver
+            </Link>
+          </button>
+        </div>
         <div className="flex justify-center items-center">
-          <div className="w-5 h-5 rounded-full bg-[#8EB6ED]"></div>
+          <div className={`w-5 h-5 rounded-full bg-[${color}]`}></div>
           <h2 className="font-bold text-center w-4/6">{title}</h2>
         </div>
         <p className="text-[10px] w-3/4 text-center bg-white p-3 m-2">
