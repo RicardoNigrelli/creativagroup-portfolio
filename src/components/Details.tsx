@@ -10,7 +10,12 @@ import { AiOutlineMail } from "react-icons/ai";
 import { motion, AnimatePresence } from "framer-motion";
 import { Navbar } from "./Navbar";
 
-function Commerce() {
+interface DetailsProps {
+  title: string;
+  description: string;
+}
+
+const Details: React.FC<DetailsProps> = ({ title, description }) => {
   const generateWhatsAppLink = (message: string) => {
     const phoneNumber = "5492964543839";
     const encodedMessage = encodeURIComponent(message);
@@ -21,23 +26,12 @@ function Commerce() {
     <div className="absolute shadow-lg bg-white bg-opacity-50 rounded-3xl flex flex-col items-center justify-center w-3/4 z-10 h-[80%]">
       <Navbar />
       <div className="flex flex-col justify-center items-center w-48 h-48 sm:w-80 sm:h-80 md:h-96 md:w-96 rounded-full bg-gradient-to-r from-[#fff2ea9f] to-[#d0f4fa75]">
-        {/* <div className="relative w-full h-full flex flex-col justify-center items-center">
-          <Image src={iconLogo} alt="" className="w-2/4 pb-8" />
-          <Image src={logo} alt="" className="absolute bottom-10 w-3/4" />
-        </div> */}
         <div className="flex justify-center items-center">
           <div className="w-5 h-5 rounded-full bg-[#8EB6ED]"></div>
-          <h2 className="font-bold text-center w-4/6">
-            ¡COMERCIALIZA Y DISTRIBUYE TU MARCA CON ÉXITO!
-          </h2>
+          <h2 className="font-bold text-center w-4/6">{title}</h2>
         </div>
         <p className="text-[10px] w-3/4 text-center bg-white p-3 m-2">
-          Contamos con un equipo especializado en{" "}
-          <strong>la comercialización y distribución de productos.</strong>{" "}
-          Nuestros profesionales te ayudarán a expandir tu marca y alcanzar
-          nuevos mercados con eficacia.
-          <br />
-          <strong>¿Quieres conocer más sobre nuestras soluciones?</strong>
+          {description}
         </p>
         <div className="flex flex-row gap-1">
           <div className="social-media-buttons">
@@ -116,6 +110,6 @@ function Commerce() {
       </div>
     </div>
   );
-}
+};
 
-export default Commerce;
+export default Details;
