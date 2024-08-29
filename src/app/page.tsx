@@ -1,4 +1,3 @@
-import { BubbleBg } from "@/components/BubbleBg";
 
 import SelectLanguages from "@/components/SelectLanguages";
 
